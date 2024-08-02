@@ -1,0 +1,22 @@
+{
+  "name": "github-commitor-bot",
+  "version": "1.0.0",
+  "description": "this bot is only for learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaypatel342005/github-commits-bot.git"
+  },
+  "author": "Jay Patel",
+  "license": "ISC",
+  "dependencies": {
+    "github-commitor-bot": "file:",
+    "jsonfile": "^6.1.0",
+    "moment": "^2.30.1",
+    "random": "^4.1.0",
+    "simple-git": "^3.25.0"
+  }
+}
