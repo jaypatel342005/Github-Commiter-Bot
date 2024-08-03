@@ -22,7 +22,11 @@ This code is provided "as-is" without any warranty of any kind, express or impli
     ```
 3. Run the script:
     ```sh
-    node script.js
+    node index.js
+    ```
+4. Io make commit on specific date Run the script 2 :
+     ```sh
+    node index2.js
     ```
 
 ## License
