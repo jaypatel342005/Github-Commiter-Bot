@@ -14,7 +14,7 @@ const askQuestion = (question) => {
     return new Promise((resolve) => rl.question(question, resolve));
 };
 
-const makeCommit = async (n, date) => {
+const makeCommit = async (n, date, counter = 0) => {
     if (n === 0) {
         await simpleGit.push();
         console.log("All commits made and pushed!");
@@ -23,15 +23,15 @@ const makeCommit = async (n, date) => {
     }
 
     const DATE = moment(date).format();
-    const data = { date: DATE };
+    const data = { date: DATE, counter: counter };
 
-    console.log(`Committing for date: ${DATE}`);
+    console.log(`Committing for date: ${DATE} with counter: ${counter}`);
     
     await jsonfile.writeFile(FILE_PATH, data);
     await simpleGit.add([FILE_PATH]);
-    await simpleGit.commit(DATE, [FILE_PATH], { '--date': DATE });
+    await simpleGit.commit(`Commit ${counter} on ${DATE}`, [FILE_PATH], { '--date': DATE });
     
-    await makeCommit(n - 1, date);
+    await makeCommit(n - 1, date, counter + 1);
 };
 
 const start = async () => {

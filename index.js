@@ -23,4 +23,4 @@ const makeCommit = async (n) => {
     });
 };
 
-makeCommit(100);
+makeCommit(200);
