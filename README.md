@@ -24,7 +24,7 @@ This code is provided "as-is" without any warranty of any kind, express or impli
     ```sh
     node index.js
     ```
-4. Io make commit on specific date Run the script 2 :
+4. To make commit on specific date Run the script 2 :
      ```sh
     node index2.js
     ```
