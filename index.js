@@ -28,4 +28,4 @@ const makeCommit = async (n) => {
     });
 };
 
-makeCommit(301);
+makeCommit(300);
